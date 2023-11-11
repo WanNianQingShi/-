@@ -1,0 +1,11 @@
+#music-list-item-action--file-focus{
+    width: 85%;
+    min-height:10px;
+    background: var(--area-theme-color);
+    border-radius:10px ;
+    font-size: 15px;
+    margin: 10px auto;
+    padding: 10px 5%;
+    word-break: break-word;
+
+}

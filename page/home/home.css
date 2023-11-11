@@ -1,0 +1,101 @@
+
+#song-name {
+    width: 80%;
+    font-size: 25px;
+    background: transparent;
+    position: absolute;
+    top: 5%;
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+#singer {
+    width: fit-content;
+    font-size:20px;
+    background: transparent;
+    position: absolute;
+    top: 20%;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: scroll;
+
+}
+
+#manage-area {
+    width: 90%;
+    height: fit-content;
+    margin: auto;
+}
+
+#control {
+    width: fit-content;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    margin-left:auto ;
+    margin-right:auto ;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform-origin:center ;
+    top: 30%;
+
+}
+#menu:active,#control:active{
+    transform:scale(0.6);
+    opacity: 0.5;
+}
+
+#progress {
+    width: 90%;
+
+    overflow: visible;top;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 25%;
+    position: absolute;
+}
+
+
+#menu,#volume,#like{
+    position: relative;
+    border: 0;
+    font-weight: 1000;
+    font-size: 20px;
+    width: fit-content;
+    height: fit-content;
+    flex-direction:column ;
+
+    text-align: center;
+    top: 0;
+    right: 0;
+    background: transparent;
+
+
+}
+
+#floor-nav{
+    justify-content: space-around;
+    background: transparent;
+    width: 90%;
+    display:inline-flex;
+    height: fit-content;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 1%;
+    position: absolute;
+}

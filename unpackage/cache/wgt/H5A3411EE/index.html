@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="color-scheme" content="dark"/>
+    <title>AndroidMusicPlayer</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="page/home/home.css">
+    <link rel="stylesheet" href="page/music-list-item-action/music-list-item-action.css">
+    <link rel="stylesheet" href="page/online-music/online-music.css">
+    <script src="js/index.js"></script>
+    <script src="page/home/home.js"></script>
+    <script src="page/online-music/online-music.js"></script>
+    <script src="js/uni_api.js"></script>
+    <link rel="stylesheet" href="img/bootstrap-icons-1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+
+<div id="home">
+    <!--<div id="head">
+        <div id="app-name" onclick="quitApp()">{}</div>
+        <div id="time"></div>
+    </div>-->
+
+    <div id="home-body">
+
+        <div id="main">
+
+            <button id="menu" onclick="showPage(`music-list`)"><i class="bi bi-list" style="font-size: 50px;"></i>
+            </button>
+
+            <div id="song-name">歌名</div>
+            <div id="singer">作者</div>
+            <div>
+                <button id="control" onclick="togglePlay()"><i class="bi bi-play-fill" style="font-size: 60px;"></i>
+                </button>
+                <input type="range" value="0" id="progress" step="0.01"/>
+
+            </div>
+
+            <button id="menu" onclick="showPage(`music-list`)"><i class="bi bi-list" style="font-size: 50px;"></i>
+            </button>
+            <!--<button onclick="resumePlayMusic()">播放</button>
+            <button onclick="pausePlayMusic()">暂停</button>-->
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- <div class="page" id="version">
+    <div class="page-head">
+        <div class="page-name">Back|Version</div>
+    </div>
+    <div class="page-body"></div>
+</div> -->
+
+<div class="page music-list" id="music-list" property="ignore-copy">
+    <div class="page-head">
+        <div class="page-name">音乐列表</div>
+    </div>
+    <div class="page-body">
+
+
+        <ROOT id="music-list-root">
+            
+        </ROOT>
+        <ROOT>
+            <h3 style="text-align: center;">查找更多</h3>
+            <button class="btn" style="background-color: #0093fc;" onclick="clonePage('online-music-search')">在 网易云 搜索</button>
+        </ROOT>
+
+    </div>
+</div>
+
+<div class="page" id="music-list-item-action">
+    <div class="page-head">
+        <div class="page-name">更多操作</div>
+    </div>
+    <div class="page-body">
+        <div id="music-list-item-action--file-focus">已选取：</div>
+
+        <button class="btn" id="music-list-item-action--delete">删除文件</button>
+        <button class="btn" id="music-list-item-action--property">文件属性</button>
+        <button class="btn" id="music-list-item-action--sign">标记</button>
+
+    </div>
+</div>
+
+
+<div class="page" id="online-music-search">
+    <div class="page-head">
+        <div class="page-name">在线搜索</div>
+    </div>
+    <div class="page-body">
+        <textarea name="online-music-search--input" style="
+
+            display: block;
+            width: 90%;
+            height: 30%;
+            margin:10px auto;
+            border: #ffffff solid 2px;
+            border-radius:10px ;
+            padding: 10px 5px;
+            font-size: 20px;
+            "
+            placeholder="搜索歌曲"></textarea>
+        <button class="btn" onclick="outSearchResult()" >搜索</button>
+    </div>
+</div>
+
+<div class="page" id="online-music-result">
+    <div class="page-head">
+        <div class="page-name">搜索结果</div>
+    </div>
+    <div class="page-body">
+        <ROOT id="online-music-result--item-root"></ROOT>
+        <div class="btn" onclick="this.parentElement.scrollTo({top:-9999,left:0,behavior:'smooth',})">返回顶部</div>
+    </div>
+</div>
+
+<div class="page" id="online-music-observer">
+    <div class="page-head">
+        <div class="page-name">详细</div>
+    </div>
+    <div class="page-body">
+        <div id="online-music-observer--name">名称</div>
+        <button class="btn" id="online-music-observer--stream-play">在线播放</button>
+        <button class="btn">下载</button>
+        <fieldset>
+            <legend>作者</legend>
+            <ROOT id="online-music-observer--artist"></ROOT>
+        </fieldset>
+        <fieldset>
+            <legend>专辑</legend>
+            <ROOT id="online-music-observer--album"></ROOT>
+        </fieldset>
+    </div>
+</div>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,41 @@
+ROOT{
+    width: 100%;
+    height: fit-content;
+    display: block;
+}
+#online-music-observer--name{
+    font-size: 25px;
+    word-break: break-word;
+    width: 100%;
+}
+.list-item{
+    text-align: left;
+    border-radius: 10px;
+    font-size: 18px;
+    display: block;
+    border: none;
+    width: 94%;
+    height: fit-content;
+    margin: 5px auto;
+    padding: 10px 3%;
+    background-color: rgb(50, 50, 50);
+    transform-origin: center;
+}
+.list-item:active {
+    /*  background-color: rgb(165, 165, 165); */
+    /*  width: 100%; */
+    /* padding: 20px; */
+    /* font-size: 25px; */
+    transform: scale(0.8);
+    opacity: 0.7;
+}
+.artist{
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 14px;
+    width: 95%;
+    display: block;
+    margin: auto;
+    background: transparent;
+    padding: 3px 2%;
+
+}
